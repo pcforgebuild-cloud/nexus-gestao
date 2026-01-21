@@ -21,12 +21,19 @@ def responder():
         resposta = "Você pode criar um botão na gestão de arquivos usando a planilha que esta o banco de dados."
     elif all(word in pergunta for word in ["abrir", "arquivo"]):
         resposta = "Você pode abrir seus arquivos no botão 'Gestão de Arquivos 📂'."
-    elif all(word in pergunta for word in ["adicionar", "arquivo"]):
-        resposta = "Para adicionar um arquivo você precisa colocar o nome do arquivo na coluna de nomes no banco de dados, e, colocar o link da página ou algum link externo 📄."
     elif all(word in pergunta for word in ["editar", "arquivo"]):
         resposta = "Mude o link ou o nome do arquivo desesjado no banco de dados ✏️."
     elif all(word in pergunta for word in ["pesquisar", "arquivo"]):
         resposta = "Use a barra de pesquisa na página 'Gestão de Arquivos' para encontrar arquivos 🔍."
+    
+    
+    # Repetido
+    elif all(word in pergunta for word in ["adicionar", "arquivo"]):
+        resposta = "Para adicionar um arquivo você precisa colocar o nome do arquivo na coluna de nomes no banco de dados, e, colocar o link da página ou algum link externo 📄."
+    elif all(word in pergunta for word in ["criar", "arquivo"]):
+        resposta = "Para adicionar um arquivo você precisa colocar o nome do arquivo na coluna de nomes no banco de dados, e, colocar o link da página ou algum link externo 📄."
+    
+    
 
     
     # Anotação

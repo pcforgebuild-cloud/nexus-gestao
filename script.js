@@ -127,10 +127,10 @@ function apagarNota(i){
 document.getElementById("btn-modo-claro").onclick = () => document.body.classList.add("modo-claro");
 document.getElementById("btn-modo-escuro").onclick = () => document.body.classList.remove("modo-claro");
 
-function enviarPergunta() {
+async function enviarPergunta() {
     const pergunta = document.getElementById("inputPergunta").value;
 
-    fetch("http://127.0.0.1:5000/pergunta",
+    const resposta = await fetch("https://nexus-gestao-2j6c.onrender.com/pergunta",
        {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -138,7 +138,8 @@ function enviarPergunta() {
     })
     .then(res => res.json())
     .then(data => {
-        document.getElementById("respostaIA").innerText = data.resposta;
+        
+      document.getElementById("respostaIA").innerText = data.resposta;
     });
   }
 

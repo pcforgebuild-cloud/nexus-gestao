@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-# Rota raiz (evita erro 404 no Render)
+# Rota raiz
 @app.route("/")
 def home():
     return "Nexus Gestão está online 🚀"
@@ -16,8 +16,8 @@ def responder():
     dados = request.get_json()
     pergunta = dados.get("pergunta", "").lower()
 
-    # Perguntas e respostas (você pode adicionar mais)
-        if all(word in pergunta for word in ["botão", "arquivo"]):
+    # Perguntas específicas
+    if all(word in pergunta for word in ["botão", "arquivo"]):
         resposta = "Você pode criar um botão na gestão de arquivos usando o menu de edição."
     elif all(word in pergunta for word in ["abrir", "arquivo"]):
         resposta = "Você pode abrir seus arquivos no botão de gestão 📂."
@@ -38,7 +38,7 @@ def responder():
     elif all(word in pergunta for word in ["esqueci", "senha"]):
         resposta = "Você pode redefinir sua senha clicando em 'Esqueci minha senha' 🔑."
     elif all(word in pergunta for word in ["login", "problema"]):
-        resposta = "Verifique seu email e senha, e tente novamente ou use 'Esqueci minha senha'."
+        resposta = "Verifique seu email e senha, e tente novamente."
     elif all(word in pergunta for word in ["como", "logout"]):
         resposta = "Para sair, clique no botão de logout no canto superior direito ⏹️."
     elif all(word in pergunta for word in ["criar", "pasta"]):
@@ -48,9 +48,9 @@ def responder():
     elif all(word in pergunta for word in ["pesquisar", "arquivo"]):
         resposta = "Use a barra de pesquisa no topo para encontrar arquivos 🔍."
     elif all(word in pergunta for word in ["suporte", "ajuda"]):
-        resposta = "Entre em contato com o suporte pelo botão de ajuda no canto inferior direito 🆘."
+        resposta = "Entre em contato com o suporte pelo botão de ajuda 🆘."
 
-    # --- Perguntas genéricas ---
+    # Perguntas genéricas
     elif "olá" in pergunta or "oi" in pergunta:
         resposta = "Oi! Eu sou Sun, a IA do Nexus Gestão 😎"
     elif "arquivo" in pergunta:
@@ -60,15 +60,14 @@ def responder():
     elif "login" in pergunta:
         resposta = "Para entrar, use seu email e senha cadastrados no sistema."
 
-    # --- Caso não reconheça ---
+    # Caso não reconheça
     else:
         resposta = "Não sei responder isso ainda, mas estou aprendendo! 🤖"
 
     return jsonify({"resposta": resposta})
 
 
-
-# ⚠️ ESSA PARTE É O QUE FAZ O RENDER FUNCIONAR
+# Render / Replit
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)

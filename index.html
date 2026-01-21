@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestão de Arquivos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+  <div id="tela-inicial">
+
+    <h1 id="nome-site">Nexus Manager</h1>
+
+
+
+    <p class="descricao-principal">
+      Central de gestão de arquivos e informações pessoais e empresariais.
+      Aqui você acessa planilhas, documentos, registros e tudo o que você precisa.
+    </p>
+
+    <button id="btn-gestao" class="botao-principal">      
+      Gestão de Arquivos📂
+    </button>
+
+    <button id="btn-financa" class="botao-financa">
+      Gestão Financeira💰
+    </button>
+
+    <button id="btn-pessoa" class="botao-pessoal">
+      Gestão Pessoal🏠
+    </button>
+
+    <h2 id="anotacoes">📝 Anotações</h2>
+    <textarea id="bloco-notas"
+      placeholder="Digite suas anotações aqui..."></textarea>
+
+    <button id="btn-salvar-anot" class="botao-salvar-anot">
+      💾Salvar anotação
+    </button>
+
+    <button id="btn-ver-anot" class="botao-ver-anot">
+      📒Anotações salvas
+    </button>
+
+
+  </div> 
+
+  <div id="painel-financeiro"
+    style="display:none;">
+
+
+    <h1 id="gestao-financeira">Gestão Financeira💸</h1>
+
+
+    <div class="container-financeiro">
+      <button>Financeiro Geral</button>
+      <button>Contas a pagar</button>
+      <button>Contas a receber</button>
+      <button>Relátórios</button>
+    </div>
+
+    <button id="btn-voltar-financeiro">
+      ← Voltar para Início
+    </button>
+
+
+  </div>
+
+  <button id="toggleBtn" class="hamburger">
+    ≡
+  </button>
+
+  <div id="sidebar" class="sidebar closed">
+    <h3>Menu</h3>
+    <button
+      onclick="window.location.reload()">🏠Início</button>
+
+    <button id="btn-config">
+      ⚙️Configurações
+    </button>
+
+    <button id="btn-ia">
+      Abrir SunIA☀️
+    </button>
+
+    <div id="sidebar-botoes"></div>
+
+    <button id="btn-sidebar-anot">📒Anotações salvas</button>
+
+  </div>
+
+  <div id="painel-gestao"
+    style="display:none;">
+
+    <button id="btn-voltar-arquivos"> 
+      ← Voltar para Início
+    </button>
+
+    <h1 id="gestao-arquivos">📁 Gestão de arquivos</h1>
+  <p class="descricao2">
+    Clique nos botões abaixo para acessar as planilhas.
+  </p>
+
+
+    <input 
+      type="text" 
+      id="campoPesquisa" 
+      placeholder="🔍 Buscar arquivo..."
+      class="barra-pesquisa"
+    >
+
+  <div id="botoes-container"></div>
+
+  </div>
+
+
+</div>
+
+  <div id="painel-anot"
+    style="display:none;">
+
+    <h1>Anotações Salvas📝</h1>
+
+    <div id="lista-anot"></div>
+
+    <button id="btn-voltar-anot">
+      ←Voltar para Início
+    </button>
+
+    </div>
+
+  <div id="tela-config"
+    style="display:none;">
+
+    <button id="btn-voltar-config">
+        ← Voltar para Início
+      </button>
+
+    <h1 id="configuracao-tela" class="configuracao-tela">
+      ⚙️Configurações
+    </h1> 
+
+
+      <button id="btn-modo-claro">
+        Modo Claro
+      </button>
+
+      <button id="btn-modo-escuro">
+        Modo Escuro
+      </button>
+
+
+  </div> 
+
+  <div id="tela-ia"
+  style="display: none;">
+
+<h1 id="titulo-sun">
+  SunIA☀️
+</h1>
+
+<p id="descricao-sun">
+  Bem vindo a <strong>SunIA☀️</strong>, a nova Inteligência Artificial do <strong>Nexus Manager</strong>.
+</p>
+
+   <input type="text" id="inputPergunta" placeholder="Digite sua pergunta">
+<button id="perguntar-sun" onclick="enviarPergunta()">➔</button>
+<p id="respostaIA"></p>
+
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

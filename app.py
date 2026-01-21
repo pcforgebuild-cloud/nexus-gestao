@@ -16,45 +16,45 @@ def responder():
     dados = request.get_json()
     pergunta = dados.get("pergunta", "").lower()
 
-    # Perguntas específicas
+    # Arquivo
     if all(word in pergunta for word in ["botão", "arquivo"]):
-        resposta = "Você pode criar um botão na gestão de arquivos usando o menu de edição."
+        resposta = "Você pode criar um botão na gestão de arquivos usando a planilha que esta o banco de dados."
     elif all(word in pergunta for word in ["abrir", "arquivo"]):
-        resposta = "Você pode abrir seus arquivos no botão de gestão 📂."
-    elif all(word in pergunta for word in ["salvar", "arquivo"]):
-        resposta = "Para salvar, clique no botão de salvar dentro da gestão de arquivos 💾."
-    elif all(word in pergunta for word in ["deletar", "arquivo"]):
-        resposta = "Para deletar um arquivo, selecione ele e clique no botão de deletar 🗑️."
+        resposta = "Você pode abrir seus arquivos no botão 'Gestão de Arquivos 📂'."
     elif all(word in pergunta for word in ["adicionar", "arquivo"]):
-        resposta = "Use o botão 'Adicionar Arquivo' para criar um novo documento 📄."
+        resposta = "Para adicionar um arquivo você precisa colocar o nome do arquivo na coluna de nomes no banco de dados, e, colocar o link da página ou algum link externo 📄."
     elif all(word in pergunta for word in ["editar", "arquivo"]):
-        resposta = "Clique no arquivo que deseja editar e use o editor interno ✏️."
-    elif all(word in pergunta for word in ["upload", "arquivo"]):
-        resposta = "Você pode fazer upload de arquivos usando o botão de importação ⬆️."
-    elif all(word in pergunta for word in ["download", "arquivo"]):
-        resposta = "Clique no arquivo e depois em 'Download' para salvar no seu computador 💾."
-    elif all(word in pergunta for word in ["configuração", "usuário"]):
-        resposta = "Acesse o menu de configurações para alterar dados do usuário ⚙️."
-    elif all(word in pergunta for word in ["esqueci", "senha"]):
-        resposta = "Você pode redefinir sua senha clicando em 'Esqueci minha senha' 🔑."
-    elif all(word in pergunta for word in ["login", "problema"]):
-        resposta = "Verifique seu email e senha, e tente novamente."
-    elif all(word in pergunta for word in ["como", "logout"]):
-        resposta = "Para sair, clique no botão de logout no canto superior direito ⏹️."
-    elif all(word in pergunta for word in ["criar", "pasta"]):
-        resposta = "Clique em 'Adicionar Pasta' para criar novas pastas 📁."
-    elif all(word in pergunta for word in ["mover", "arquivo"]):
-        resposta = "Arraste o arquivo para a pasta desejada ou use o botão de mover ↪️."
+        resposta = "Mude o link ou o nome do arquivo desesjado no banco de dados ✏️."
     elif all(word in pergunta for word in ["pesquisar", "arquivo"]):
-        resposta = "Use a barra de pesquisa no topo para encontrar arquivos 🔍."
-    elif all(word in pergunta for word in ["suporte", "ajuda"]):
+        resposta = "Use a barra de pesquisa na página 'Gestão de Arquivos' para encontrar arquivos 🔍."
+
+    
+    # Anotação
+    elif all(word in pergunta for word in ["salvar", "anotação"]):
+        resposta = "Para salvar uma anotação, clique no botão salvar anotação, certifique-se que o nível de importância esteja selecionado em alguma das três opções. 💾."
+    elif all(word in pergunta for word in ["deletar", "anotação"]):
+        resposta = "Para deletar uma anotação, clique no botão de apagar da anotação que deseja excluir 🗑️."
+    elif all(word in pergunta for word in ["download", "anotação"]):
+        resposta = "Clique em 'Dowload' para baixar o arquivo desejado."
+    
+
+    # Configurações
+    elif all(word in pergunta for word in ["configuração", "botão"]):
+        resposta = "O menu de 'Configurações⚙️' fica na barra lateral esquerda."
+    elif all(word in pergunta for word in ["alterar", "modo"]):
+        resposta = "Acessando o menu 'Configurações' e selecione o modo ao qual deseja."
+
+
+    # Ajuda
+    elif all(word in pergunta for word in ["preciso", "ajuda"]):
         resposta = "Entre em contato com o suporte pelo botão de ajuda 🆘."
+
 
     # Perguntas genéricas
     elif "olá" in pergunta or "oi" in pergunta:
-        resposta = "Oi! Eu sou Sun, a IA do Nexus Gestão 😎"
+        resposta = "Oii! Eu sou Sun, a nova IA do Nexus Manager 😎"
     elif "arquivo" in pergunta:
-        resposta = "Você pode acessar seus arquivos no botão de gestão 📂."
+        resposta = "Você pode acessar seus arquivos no botão 'Gestão de Arquivos 📂'."
     elif "senha" in pergunta:
         resposta = "Se você esqueceu a senha, clique em 'Esqueci minha senha' 🔑."
     elif "login" in pergunta:

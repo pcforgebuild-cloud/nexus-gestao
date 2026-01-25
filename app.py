@@ -21,34 +21,46 @@ def responder():
         resposta = "Você pode criar um botão na gestão de arquivos usando a planilha que esta o banco de dados."
     elif all(word in pergunta for word in ["abrir", "arquivo"]):
         resposta = "Você pode abrir seus arquivos no botão 'Gestão de Arquivos 📂'."
-    elif all(word in pergunta for word in ["editar", "arquivo"]):
-        resposta = "Mude o link ou o nome do arquivo desesjado no banco de dados ✏️."
-    elif all(word in pergunta for word in ["pesquisar", "arquivo"]):
-        resposta = "Use a barra de pesquisa na página 'Gestão de Arquivos' para encontrar arquivos 🔍."
-    
-    
+
     # Repetido
     elif all(word in pergunta for word in ["adicionar", "arquivo"]):
         resposta = "Para adicionar um arquivo você precisa colocar o nome do arquivo na coluna de nomes no banco de dados, e, colocar o link da página ou algum link externo 📄."
     elif all(word in pergunta for word in ["criar", "arquivo"]):
         resposta = "Para adicionar um arquivo você precisa colocar o nome do arquivo na coluna de nomes no banco de dados, e, colocar o link da página ou algum link externo 📄."
-    
-    
-
-    
-    # Anotação
+    elif all(word in pergunta for word in ["crio", "arquivo"]):
+        resposta = "Para adicionar um arquivo você precisa colocar o nome do arquivo na coluna de nomes no banco de dados, e, colocar o link da página ou algum link externo 📄."
+    elif all(word in pergunta for word in ["editar", "arquivo"]):
+        resposta = "Mude o link ou o nome do arquivo desesjado no banco de dados ✏️."
+    elif all(word in pergunta for word in ["edito", "arquivo"]):
+        resposta = "Mude o link ou o nome do arquivo desesjado no banco de dados ✏️."
+    elif all(word in pergunta for word in ["pesquisar", "arquivo"]):
+        resposta = "Use a barra de pesquisa na página 'Gestão de Arquivos' para encontrar um arquivo 🔍."
+    elif all(word in pergunta for word in ["pesquiso", "arquivo"]):
+        resposta = "Use a barra de pesquisa na página 'Gestão de Arquivos' para encontrar um arquivo 🔍."
     elif all(word in pergunta for word in ["salvar", "anotação"]):
+        resposta = "Para salvar uma anotação, clique no botão salvar anotação, certifique-se que o nível de importância esteja selecionado em alguma das três opções. 💾."
+    elif all(word in pergunta for word in ["salvo", "anotação"]):
         resposta = "Para salvar uma anotação, clique no botão salvar anotação, certifique-se que o nível de importância esteja selecionado em alguma das três opções. 💾."
     elif all(word in pergunta for word in ["deletar", "anotação"]):
         resposta = "Para deletar uma anotação, clique no botão de apagar da anotação que deseja excluir 🗑️."
+    elif all(word in pergunta for word in ["deleto", "anotação"]):
+        resposta = "Para deletar uma anotação, clique no botão de apagar da anotação que deseja excluir 🗑️."
     elif all(word in pergunta for word in ["download", "anotação"]):
         resposta = "Clique em 'Dowload' para baixar o arquivo desejado."
-    
-
-    # Configurações
+    elif all(word in pergunta for word in ["baixo", "anotação"]):
+        resposta = "Clique em 'Dowload' para baixar o arquivo desejado."
     elif all(word in pergunta for word in ["configuração", "botão"]):
         resposta = "O menu de 'Configurações⚙️' fica na barra lateral esquerda."
+    elif all(word in pergunta for word in ["configurações", "onde"]):
+        resposta = "O menu de 'Configurações⚙️' fica na barra lateral esquerda."
+    # Configurações
     elif all(word in pergunta for word in ["alterar", "modo"]):
+        resposta = "Acessando o menu 'Configurações' e selecione o modo ao qual deseja."
+    elif all(word in pergunta for word in ["alteraro", "modo"]):
+        resposta = "Acessando o menu 'Configurações' e selecione o modo ao qual deseja."
+    elif all(word in pergunta for word in ["alterno", "modo"]):
+        resposta = "Acessando o menu 'Configurações' e selecione o modo ao qual deseja."
+    elif all(word in pergunta for word in ["mudo", "modo"]):
         resposta = "Acessando o menu 'Configurações' e selecione o modo ao qual deseja."
 
 

@@ -30,9 +30,9 @@ def responder():
     elif all(word in pergunta for word in ["crio", "arquivo"]):
         resposta = "Para adicionar um arquivo você precisa colocar o nome do arquivo na coluna de nomes no banco de dados, e, colocar o link da página ou algum link externo 📄."
     elif all(word in pergunta for word in ["editar", "arquivo"]):
-        resposta = "Mude o link ou o nome do arquivo desesjado no banco de dados ✏️."
+        resposta = "Mude o link ou o nome do arquivo desejado no banco de dados ✏️."
     elif all(word in pergunta for word in ["edito", "arquivo"]):
-        resposta = "Mude o link ou o nome do arquivo desesjado no banco de dados ✏️."
+        resposta = "Mude o link ou o nome do arquivo desejado no banco de dados ✏️."
     elif all(word in pergunta for word in ["pesquisar", "arquivo"]):
         resposta = "Use a barra de pesquisa na página 'Gestão de Arquivos' para encontrar um arquivo 🔍."
     elif all(word in pergunta for word in ["pesquiso", "arquivo"]):
@@ -56,7 +56,7 @@ def responder():
     # Configurações
     elif all(word in pergunta for word in ["alterar", "modo"]):
         resposta = "Acessando o menu 'Configurações' e selecione o modo ao qual deseja."
-    elif all(word in pergunta for word in ["alteraro", "modo"]):
+    elif all(word in pergunta for word in ["altero", "modo"]):
         resposta = "Acessando o menu 'Configurações' e selecione o modo ao qual deseja."
     elif all(word in pergunta for word in ["alterno", "modo"]):
         resposta = "Acessando o menu 'Configurações' e selecione o modo ao qual deseja."
